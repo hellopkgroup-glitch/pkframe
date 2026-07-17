@@ -77,7 +77,7 @@ const PosterCanvas = forwardRef(({ backgroundImage, userImage, name, config }, r
 
       // 3. Name
       ctx.fillStyle = config.textColor || "#000000";
-      ctx.font = `bold ${config.fontSize}px Arial`;
+      ctx.font = `500 ${config.fontSize}px "Anek Malayalam", sans-serif`;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
       ctx.fillText(name || "Sample Name", config.textX, CANVAS_HEIGHT - config.textY);
