@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./UserPage.css";
 
 import { doc, getDoc } from "firebase/firestore";
@@ -10,6 +11,7 @@ import PosterCanvas from "../../components/PosterCanvas/PosterCanvas";
 export default function UserPage() {
 
   const posterRef = useRef(null);
+  const navigate = useNavigate();
 
   const [loading, setLoading] = useState(true);
   const [template, setTemplate] = useState(null);
@@ -110,9 +112,15 @@ export default function UserPage() {
 
       <div className="user-header">
 
-        <div className="user-logo">
-          🎨
-        </div>
+  <div className="header-top">
+
+    <div className="header-left">
+
+      <div className="user-logo">
+        🎨
+      </div>
+
+      <div>
 
         <h1>PK FRAME</h1>
 
@@ -122,6 +130,26 @@ export default function UserPage() {
 
       </div>
 
+    </div>
+
+    <button
+      className="admin-nav-btn"
+      onClick={() => navigate("/admin/login")}
+    >
+
+      <span className="nav-icon">
+        ⚙
+      </span>
+
+      <span>
+        Admin
+      </span>
+
+    </button>
+
+  </div>
+
+</div>
       {/* ================= POSTER ================= */}
 
       <div className="user-card fade-up">

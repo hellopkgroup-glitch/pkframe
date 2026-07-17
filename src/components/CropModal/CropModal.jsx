@@ -67,18 +67,45 @@ export default function CropModal({
 
       <div className="crop-modal">
 
+        {/* =========================
+            HEADER
+        ========================= */}
+
         <div className="crop-header">
 
-          <h2>Crop Photo</h2>
+          <div className="crop-title">
+
+            <div className="crop-icon">
+              🖼️
+            </div>
+
+            <div>
+
+              <h2>
+                Adjust Your Photo
+              </h2>
+
+              <p>
+                Move, zoom or rotate your photo before applying.
+              </p>
+
+            </div>
+
+          </div>
 
           <button
             className="close-btn"
             onClick={onCancel}
+            aria-label="Close"
           >
             ✕
           </button>
 
         </div>
+
+        {/* =========================
+            CROPPER
+        ========================= */}
 
         <div className="crop-body">
 
@@ -87,7 +114,7 @@ export default function CropModal({
             src={image}
             style={{
               width: "100%",
-              height: 420,
+              height: 460,
             }}
             aspectRatio={aspectRatio}
             viewMode={1}
@@ -106,34 +133,74 @@ export default function CropModal({
 
         </div>
 
+        {/* =========================
+            TOOLBAR
+        ========================= */}
+
         <div className="crop-tools">
 
-          <button onClick={zoomOut}>－</button>
+          <button
+            type="button"
+            onClick={zoomOut}
+            title="Zoom Out"
+          >
+            ➖
+          </button>
 
-          <button onClick={zoomIn}>＋</button>
+          <button
+            type="button"
+            onClick={zoomIn}
+            title="Zoom In"
+          >
+            ➕
+          </button>
 
-          <button onClick={rotateLeft}>⟲</button>
+          <button
+            type="button"
+            onClick={rotateLeft}
+            title="Rotate Left"
+          >
+            ↺
+          </button>
 
-          <button onClick={rotateRight}>⟳</button>
+          <button
+            type="button"
+            onClick={rotateRight}
+            title="Rotate Right"
+          >
+            ↻
+          </button>
 
-          <button onClick={resetCrop}>Reset</button>
+          <button
+            type="button"
+            onClick={resetCrop}
+            className="reset-btn"
+          >
+            Reset
+          </button>
 
         </div>
+
+        {/* =========================
+            FOOTER
+        ========================= */}
 
         <div className="crop-footer">
 
           <button
-            className="cancel-btn"
+            type="button"
+            className="crop-btn crop-btn-cancel"
             onClick={onCancel}
           >
             Cancel
           </button>
 
           <button
-            className="apply-btn"
+            type="button"
+            className="crop-btn crop-btn-apply"
             onClick={handleCrop}
           >
-            Apply Crop
+            ✓ Apply Crop
           </button>
 
         </div>
