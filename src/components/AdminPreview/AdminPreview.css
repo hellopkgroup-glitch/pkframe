@@ -1,0 +1,502 @@
+/* ==========================================================
+   PK FRAME V2
+   ADMIN PREVIEW
+========================================================== */
+
+.admin-preview{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* ==========================================================
+   POSTER
+========================================================== */
+
+.poster-preview{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:1080 / 1440;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    background:#0F172A;
+
+    border:2px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45);
+
+}
+
+/* ==========================================================
+   BACKGROUND
+========================================================== */
+
+.poster-background{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    user-select:none;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   EMPTY STATE
+========================================================== */
+
+.poster-empty{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #1E293B,
+            #0F172A
+        );
+
+    color:#CBD5E1;
+
+    padding:30px;
+
+}
+
+.poster-empty-icon{
+
+    width:84px;
+
+    height:84px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+    border-radius:24px;
+
+    font-size:42px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6C63FF,
+            #FF4D94
+        );
+
+    box-shadow:
+        0 18px 40px rgba(108,99,255,.30);
+
+}
+
+.poster-empty h3{
+
+    margin:0;
+
+    color:#FFFFFF;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.poster-empty p{
+
+    margin-top:10px;
+
+    color:#94A3B8;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+    max-width:220px;
+
+}
+
+/* ==========================================================
+   PHOTO PLACEHOLDER
+========================================================== */
+
+.photo-placeholder{
+
+    position:absolute;
+
+    border:2px dashed #FFFFFF;
+
+    border-radius:12px;
+
+    background:rgba(108,99,255,.15);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.25s;
+
+    backdrop-filter:blur(4px);
+
+}
+
+.photo-placeholder:hover{
+
+    border-color:#6C63FF;
+
+    background:rgba(108,99,255,.22);
+
+}
+
+.photo-label{
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    background:#6C63FF;
+
+    color:#FFFFFF;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+/* ==========================================================
+   SAMPLE TEXT
+========================================================== */
+
+.text-placeholder{
+
+    position:absolute;
+
+    transform:translateX(-50%);
+
+    font-weight:700;
+
+    text-align:center;
+
+    white-space:nowrap;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,.45);
+
+    pointer-events:none;
+
+    user-select:none;
+
+    transition:.25s;
+
+}
+
+/* ==========================================================
+   ALIGNMENT GUIDES
+========================================================== */
+
+.preview-guides{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+.guide{
+
+    position:absolute;
+
+    background:rgba(255,255,255,.20);
+
+}
+
+.guide-horizontal{
+
+    top:50%;
+
+    left:0;
+
+    width:100%;
+
+    height:1px;
+
+    transform:translateY(-50%);
+
+}
+
+.guide-vertical{
+
+    left:50%;
+
+    top:0;
+
+    width:1px;
+
+    height:100%;
+
+    transform:translateX(-50%);
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.preview-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    background:rgba(22,29,46,.82);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.preview-size{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#CBD5E1;
+
+    font-size:14px;
+
+}
+
+.preview-size span{
+
+    font-size:18px;
+
+}
+
+.preview-size strong{
+
+    font-weight:600;
+
+}
+
+.preview-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:rgba(34,197,94,.12);
+
+    border:1px solid rgba(34,197,94,.22);
+
+    color:#4ADE80;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+}
+
+.status-dot{
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#22C55E;
+
+    box-shadow:
+        0 0 12px rgba(34,197,94,.75);
+
+    animation:pulse 1.8s infinite;
+
+}
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.poster-preview{
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+.poster-preview:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 35px 80px rgba(0,0,0,.55);
+
+}
+
+/* ==========================================================
+   ANIMATION
+========================================================== */
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(.9);
+
+        opacity:.6;
+
+    }
+
+    50%{
+
+        transform:scale(1.2);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(.9);
+
+        opacity:.6;
+
+    }
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:768px){
+
+    .poster-preview{
+
+        border-radius:18px;
+
+    }
+
+    .poster-empty-icon{
+
+        width:68px;
+
+        height:68px;
+
+        font-size:34px;
+
+        border-radius:18px;
+
+    }
+
+    .poster-empty h3{
+
+        font-size:18px;
+
+    }
+
+    .poster-empty p{
+
+        font-size:13px;
+
+    }
+
+    .preview-footer{
+
+        padding:12px 14px;
+
+        gap:12px;
+
+        flex-wrap:wrap;
+
+    }
+
+    .preview-size{
+
+        font-size:13px;
+
+    }
+
+    .preview-status{
+
+        font-size:11px;
+
+        padding:7px 12px;
+
+    }
+
+}
+
+@media (max-width:420px){
+
+    .preview-footer{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .preview-status{
+
+        align-self:flex-start;
+
+    }
+
+}

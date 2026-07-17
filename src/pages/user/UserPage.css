@@ -1,0 +1,491 @@
+/* =====================================================
+   PK FRAME V2
+   USER PAGE
+===================================================== */
+
+.user-page{
+
+    min-height:100vh;
+
+    padding:30px 20px 60px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top right,#6C63FF25,transparent 35%),
+        radial-gradient(circle at bottom left,#FF4D9420,transparent 35%),
+        #090E1A;
+
+}
+
+/* ========================================= */
+
+.user-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    border-radius:50%;
+
+    background:#6C63FF;
+
+    filter:blur(140px);
+
+    opacity:.18;
+
+    top:-160px;
+
+    right:-120px;
+
+}
+
+.user-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    background:#FF4D94;
+
+    filter:blur(120px);
+
+    opacity:.12;
+
+    bottom:-120px;
+
+    left:-120px;
+
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.user-header{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.user-header h1{
+
+    margin:0;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    letter-spacing:1px;
+
+}
+
+.user-header p{
+
+    margin-top:10px;
+
+    color:#94A3B8;
+
+    font-size:15px;
+
+}
+
+/* ========================================= */
+
+.user-logo{
+
+    width:78px;
+
+    height:78px;
+
+    margin:0 auto 18px;
+
+    border-radius:24px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6C63FF,
+            #FF4D94
+        );
+
+    box-shadow:
+        0 20px 40px rgba(108,99,255,.35);
+
+}
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.user-card{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:430px;
+
+    margin:20px auto;
+
+    padding:22px;
+
+    border-radius:26px;
+
+    background:rgba(22,29,46,.75);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.35);
+
+}
+
+/* ========================================= */
+
+.user-card h2{
+
+    margin:0 0 18px;
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+/* =====================================================
+   POSTER
+===================================================== */
+
+.poster-wrapper{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.04);
+
+}
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.text-input{
+
+    width:100%;
+
+    height:56px;
+
+    padding:0 18px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:#1A2338;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+.text-input::placeholder{
+
+    color:#7B879D;
+
+}
+
+.text-input:focus{
+
+    border-color:#6C63FF;
+
+    box-shadow:
+        0 0 0 4px rgba(108,99,255,.18);
+
+}
+/* =====================================================
+   LABEL
+===================================================== */
+
+.input-label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    color:#CBD5E1;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* =====================================================
+   FILE INPUT
+===================================================== */
+
+.file-upload{
+
+    width:100%;
+
+    min-height:64px;
+
+    border:2px dashed rgba(255,255,255,.12);
+
+    border-radius:18px;
+
+    background:#1A2338;
+
+    color:#CBD5E1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    overflow:hidden;
+
+}
+
+.file-upload:hover{
+
+    border-color:#6C63FF;
+
+    background:#202B44;
+
+}
+
+.file-upload input{
+
+    display:none;
+
+}
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.photo-status{
+
+    margin-top:14px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    background:rgba(34,197,94,.12);
+
+    border:1px solid rgba(34,197,94,.25);
+
+    color:#4ADE80;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* =====================================================
+   DOWNLOAD BUTTON
+===================================================== */
+
+.download-btn{
+
+    width:100%;
+
+    height:58px;
+
+    margin-top:22px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+        135deg,
+        #6C63FF,
+        #FF4D94
+    );
+
+    color:#FFFFFF;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+        0 18px 40px rgba(108,99,255,.30);
+
+}
+
+.download-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 24px 50px rgba(108,99,255,.40);
+
+}
+
+.download-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.user-footer{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:#7B879D;
+
+    font-size:13px;
+
+}
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+.user-card{
+
+    animation:cardFade .5s ease;
+
+}
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:480px){
+
+    .user-page{
+
+        padding:20px 14px 40px;
+
+    }
+
+    .user-card{
+
+        padding:18px;
+
+        border-radius:22px;
+
+    }
+
+    .user-logo{
+
+        width:68px;
+
+        height:68px;
+
+        font-size:30px;
+
+    }
+
+    .user-header h1{
+
+        font-size:28px;
+
+    }
+
+    .user-header p{
+
+        font-size:14px;
+
+    }
+
+    .download-btn{
+
+        height:54px;
+
+    }
+
+}

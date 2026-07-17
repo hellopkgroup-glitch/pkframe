@@ -1,0 +1,19 @@
+@media(max-width:768px){
+
+    body{
+
+        font-size:15px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .card{
+
+        border-radius:20px;
+
+    }
+
+}

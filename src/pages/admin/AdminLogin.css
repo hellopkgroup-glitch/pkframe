@@ -1,0 +1,445 @@
+/* ===================================================
+   PK FRAME V2
+   ADMIN LOGIN
+=================================================== */
+
+.admin-login-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px 20px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top right,#6C63FF33,transparent 40%),
+        radial-gradient(circle at bottom left,#FF4D9430,transparent 35%),
+        #090E1A;
+
+}
+
+/* ========================================= */
+
+.admin-login-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    background:#6C63FF;
+
+    filter:blur(140px);
+
+    opacity:.18;
+
+    top:-150px;
+
+    right:-100px;
+
+}
+
+.admin-login-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    background:#FF4D94;
+
+    filter:blur(130px);
+
+    opacity:.15;
+
+    bottom:-120px;
+
+    left:-100px;
+
+}
+
+/* ===================================================
+   CARD
+=================================================== */
+
+.login-card{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:420px;
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:rgba(22,29,46,.75);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.45);
+
+}
+
+/* ===================================================
+   LOGO
+=================================================== */
+
+.login-logo{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.login-logo h1{
+
+    margin:0;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    letter-spacing:.5px;
+
+}
+
+.login-logo p{
+
+    margin-top:10px;
+
+    color:#9CA3AF;
+
+    font-size:15px;
+
+}
+
+/* ========================================= */
+
+.login-logo::before{
+
+    content:"";
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:76px;
+
+    height:76px;
+
+    margin:0 auto 18px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6C63FF,
+            #FF4D94
+        );
+
+    box-shadow:
+        0 15px 35px rgba(108,99,255,.35);
+
+}
+
+/* ===================================================
+   FORM
+=================================================== */
+
+.login-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.login-form label{
+
+    margin-bottom:8px;
+
+    color:#CBD5E1;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ===================================================
+   INPUT
+=================================================== */
+
+.login-form input{
+
+    width:100%;
+
+    height:56px;
+
+    margin-bottom:20px;
+
+    padding:0 18px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:#1A2338;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+.login-form input::placeholder{
+
+    color:#7B879D;
+
+}
+
+.login-form input:focus{
+
+    border-color:#6C63FF;
+
+    box-shadow:
+        0 0 0 4px rgba(108,99,255,.18);
+
+}
+/* ===================================================
+   ERROR MESSAGE
+=================================================== */
+
+.login-error{
+
+    margin-bottom:20px;
+
+    padding:14px 16px;
+
+    border-radius:14px;
+
+    background:rgba(239,68,68,.12);
+
+    border:1px solid rgba(239,68,68,.25);
+
+    color:#FFB4B4;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    text-align:center;
+
+}
+
+/* ===================================================
+   LOGIN BUTTON
+=================================================== */
+
+.login-form button{
+
+    width:100%;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6C63FF,
+            #FF4D94
+        );
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+        0 12px 30px rgba(108,99,255,.35);
+
+}
+
+.login-form button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 20px 40px rgba(108,99,255,.45);
+
+}
+
+.login-form button:active{
+
+    transform:scale(.98);
+
+}
+
+.login-form button:disabled{
+
+    opacity:.65;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+/* ===================================================
+   FOOTER
+=================================================== */
+
+.login-footer{
+
+    margin-top:28px;
+
+    text-align:center;
+
+}
+
+.login-footer a{
+
+    color:#9CA3AF;
+
+    font-size:14px;
+
+    transition:.25s;
+
+}
+
+.login-footer a:hover{
+
+    color:#FFFFFF;
+
+}
+
+/* ===================================================
+   CARD ANIMATION
+=================================================== */
+
+.login-card{
+
+    animation:loginFade .6s ease;
+
+}
+
+@keyframes loginFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===================================================
+   MOBILE
+=================================================== */
+
+@media(max-width:480px){
+
+    .admin-login-page{
+
+        padding:18px;
+
+    }
+
+    .login-card{
+
+        padding:26px;
+
+        border-radius:24px;
+
+    }
+
+    .login-logo::before{
+
+        width:68px;
+
+        height:68px;
+
+        border-radius:18px;
+
+    }
+
+    .login-logo h1{
+
+        font-size:28px;
+
+    }
+
+    .login-logo p{
+
+        font-size:14px;
+
+    }
+
+    .login-form input{
+
+        height:54px;
+
+        font-size:15px;
+
+    }
+
+    .login-form button{
+
+        height:54px;
+
+    }
+
+}

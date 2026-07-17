@@ -1,0 +1,309 @@
+/* ==========================================
+   CROP MODAL
+========================================== */
+
+.crop-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    z-index:9999;
+
+    animation:fadeIn .25s ease;
+
+}
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.crop-modal{
+
+    width:100%;
+
+    max-width:520px;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35);
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.crop-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 22px;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.crop-header h2{
+
+    margin:0;
+
+    font-size:20px;
+
+    color:#222;
+
+}
+
+.close-btn{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#f3f3f3;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.25s;
+
+}
+
+.close-btn:hover{
+
+    background:#e5e5e5;
+
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+.crop-body{
+
+    padding:20px;
+
+    background:#fafafa;
+
+}
+
+.cropper-container{
+
+    width:100% !important;
+
+}
+
+/* ==========================================
+   TOOLS
+========================================== */
+
+.crop-tools{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:10px;
+
+    padding:0 20px 20px;
+
+}
+
+.crop-tools button{
+
+    height:44px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#f5f5f5;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.crop-tools button:hover{
+
+    background:#1877F2;
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.crop-footer{
+
+    display:flex;
+
+    gap:12px;
+
+    padding:20px;
+
+    border-top:1px solid #ececec;
+
+}
+
+.cancel-btn{
+
+    flex:1;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#d9d9d9;
+
+    color:#333;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.cancel-btn:hover{
+
+    background:#c6c6c6;
+
+}
+
+.apply-btn{
+
+    flex:1;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#1877F2;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.apply-btn:hover{
+
+    background:#1464d2;
+
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:600px){
+
+.crop-overlay{
+
+    padding:10px;
+
+}
+
+.crop-modal{
+
+    max-width:100%;
+
+    border-radius:16px;
+
+}
+
+.crop-body{
+
+    padding:15px;
+
+}
+
+.crop-tools{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.crop-footer{
+
+    flex-direction:column;
+
+}
+
+.cancel-btn,
+.apply-btn{
+
+    width:100%;
+
+}
+
+}

@@ -1,0 +1,96 @@
+/* ==========================================
+   POSTER CANVAS
+========================================== */
+
+.poster-canvas-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   CANVAS
+========================================== */
+
+.poster-canvas{
+
+    width:100%;
+
+    max-width:380px;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:16px;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.12);
+
+    border:1px solid #e8e8e8;
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+/* ==========================================
+   LOADING STATE
+========================================== */
+
+.poster-canvas.loading{
+
+    opacity:.6;
+
+    transition:.3s;
+
+}
+
+/* ==========================================
+   DOWNLOAD ANIMATION
+========================================== */
+
+.poster-canvas.downloading{
+
+    transform:scale(.98);
+
+    transition:.15s;
+
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+    .poster-canvas{
+
+        max-width:100%;
+
+        border-radius:14px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .poster-canvas{
+
+        border-radius:12px;
+
+    }
+
+}
