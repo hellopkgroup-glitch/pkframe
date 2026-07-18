@@ -33,13 +33,13 @@
 
     width:min(95vw,560px);
 
-    max-height:92vh;
-
-    overflow:hidden;
+    height:min(92vh,760px);
 
     display:flex;
 
     flex-direction:column;
+
+    overflow:hidden;
 
     border-radius:24px;
 
@@ -162,7 +162,13 @@
 
 .crop-body{
 
-    padding:18px;
+    flex:1;
+
+    min-height:0;
+
+    overflow:auto;
+
+    padding:12px;
 
     background:#0F172A;
 
@@ -243,11 +249,15 @@
 
 .crop-footer{
 
+    flex-shrink:0;
+
     display:flex;
 
     gap:14px;
 
-    padding:20px;
+    padding:16px;
+
+    padding-bottom:max(16px, env(safe-area-inset-bottom));
 
     background:#111827;
 
@@ -259,7 +269,7 @@
 
     flex:1;
 
-    height:56px;
+    min-height:58px;
 
     border:none;
 
@@ -267,7 +277,7 @@
 
     cursor:pointer;
 
-    font-size:16px;
+    font-size:17px;
 
     font-weight:700;
 
