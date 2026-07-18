@@ -12,6 +12,7 @@ import "./styles/theme.css";
 import "./styles/components.css";
 import "./styles/animations.css";
 import "./styles/mobile.css";
+import "./styles/fonts.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
