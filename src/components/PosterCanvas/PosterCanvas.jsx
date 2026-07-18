@@ -48,6 +48,15 @@ const PosterCanvas = forwardRef(({ backgroundImage, userImage, name, config }, r
       ctx.imageSmoothingEnabled = true;
       ctx.imageSmoothingQuality = "high";
 
+      // Wait until Anek Malayalam is available
+    if ("fonts" in document) {
+    await document.fonts.load(
+     `500 ${config.fontSize}px "Anek Malayalam"`
+    );
+
+     await document.fonts.ready;
+}
+
       backgroundRef.current = await loadImage(backgroundImage);
       photoRef.current = await loadImage(userImage);
 
